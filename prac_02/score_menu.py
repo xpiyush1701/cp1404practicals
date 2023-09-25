@@ -1,21 +1,3 @@
-"""
-display menu
-get choice
-while choice != <quit option>
-    if choice == <first option>
-        <do first task>
-    else if choice == <second option>
-        <do second task>
-    ...
-    else if choice == <n-th option>
-        <do n-th task>
-    else
-        display invalid input error message
-    display menu
-    get choice
-<do final thing, if needed>
-"""
-
 MENU = """G - Get valid score (0-100 inclusive)
 P - Print result
 S - Show stars
@@ -23,6 +5,7 @@ Q - Quit"""
 
 
 def main():
+    get_valid_score()
     print(MENU)
     choice = input(">>> ").upper()
     while choice != "Q":
@@ -36,14 +19,25 @@ def main():
             print("Invalid option")
         print(MENU)
         choice = input(">>> ").upper()
-    print("Thank you.")
+    print("Farewell.")
 
 
 def get_valid_score():
+    """
+    Find a score between 0-100 inclusive.
+    """
     score = float(input("Enter score: "))
     if score < 0 or score > 100:
         print("Invalid score")
-    elif score >= 90:
+        score = float(input("Enter score: "))
+        return score
+
+
+def print_result(score):
+    """
+    Print result based on score.
+    """
+    if score >= 90:
         print("Excellent")
     elif score >= 50:
         print("Passable")
@@ -51,11 +45,10 @@ def get_valid_score():
         print("Bad")
 
 
-def print_result():
-    pass
-
-
-def show_stars():
+def show_stars(score):
+    """
+    Print number of stars based on score.
+    """
     print("*" * score)
 
 
