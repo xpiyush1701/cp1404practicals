@@ -13,31 +13,20 @@ is_valid_input = False
 while not is_valid_input:
     try:
         numerator = int(input("Enter the numerator: "))
-        is_valid_input = True
-    except ValueError:
-        print("Numerator and denominator must be valid numbers!")
-
-is_valid_input = False
-while not is_valid_input:
-    try:
         denominator = int(input("Enter the denominator: "))
-        is_valid_input = True
+
+        if denominator == 0:
+            raise ZeroDivisionError("Denominator cannot be zero!")
+
+        fraction = numerator / denominator
+        print(fraction)
+        print("Finished.")
+
+        break
+
+    except ValueError:
+        print("Numerator/denominator must be valid numbers!")
+
     except ZeroDivisionError:
         print("Cannot divide by zero!")
 
-
-fraction = numerator / denominator
-print(fraction)
-print("Finished.")
-
-# is_valid_input = False
-# while not is_valid_input:
-#     try:
-#         age = int(input("Age: "))
-#         if age < 0:
-#             print("Age must be >= 0")
-#         else:
-#             is_valid_input = True
-#     except ValueError:
-#         print("Invalid (not an integer)")
-# print("Next year you will be", age + 1)
