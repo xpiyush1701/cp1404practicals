@@ -29,4 +29,3 @@ while not is_valid_input:
 
     except ZeroDivisionError:
         print("Cannot divide by zero!")
-
