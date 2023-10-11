@@ -14,7 +14,6 @@ for name in CODE_TO_NAME:
     print(f"{name:3} is {CODE_TO_NAME[name]}")
 
 is_valid_input = False
-# state_code = input("Enter short state: ").upper()
 while not is_valid_input:
     try:
         state_code = input("Enter short state: ").upper()
