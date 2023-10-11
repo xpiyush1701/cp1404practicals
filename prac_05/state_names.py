@@ -19,6 +19,7 @@ while not is_valid_input:
         state_code = input("Enter short state: ").upper()
         if state_code in CODE_TO_NAME:
             print(state_code, "is", CODE_TO_NAME[state_code])
+            is_valid_input = True
         else:
             raise NameError
     except NameError:
