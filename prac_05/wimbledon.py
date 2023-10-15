@@ -9,7 +9,7 @@ FILENAME = "wimbledon.csv"
 def main():
     data = get_sorted_data(FILENAME)
     champion_to_count, countries = process_records(data)
-    print_data()
+    print_data(champion_to_count, countries)
 
 
 def get_sorted_data(filename):
@@ -24,7 +24,7 @@ def get_sorted_data(filename):
 
 
 def process_records(data):
-    """Create dictionary of champions and set of countries from records (list of lists)."""
+    """Create dictionary of champions and set of countries from records (nested lists)."""
     champion_to_count = {}
     countries = set()
     for datum in data:
@@ -36,9 +36,13 @@ def process_records(data):
     return champion_to_count, countries
 
 
-
-def print_data():
-    pass
+def print_data(champ_to_count, countries):
+    """Display champions wins and countries."""
+    print("Wimbledon Champions")
+    for champ, count in champ_to_count.items():
+        print(champ, count)
+    print(f"These are the {len(countries)} countries that have won Wimbledon:")
+    print(", ".join(country for country in countries))
 
 
 main()
