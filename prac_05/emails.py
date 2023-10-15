@@ -15,7 +15,8 @@ def main():
 
 def get_name_from_email(email):
     """Estimate and store name from emails"""
-    parts = email.split(".")
+    prefix = email.split('@')[0]
+    parts = prefix.split(".")
     name = " ".join(parts).title()
     return name
 
