@@ -1,6 +1,6 @@
 """
 Estimate: 20 Minutes
-Actual:
+Actual: 14 Minutes
 """
 
 
@@ -19,11 +19,13 @@ def main():
     for name, email in name_to_email.items():
         print(f"{name} ({email})")
 
+
 def get_name_from_email(email):
     """Estimate and store name from emails"""
     prefix = email.split('@')[0]
     parts = prefix.split(".")
     name = " ".join(parts).title()
     return name
+
 
 main()
