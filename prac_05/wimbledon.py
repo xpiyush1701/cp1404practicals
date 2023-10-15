@@ -8,8 +8,7 @@ FILENAME = "wimbledon.csv"
 
 def main():
     data = get_sorted_data(FILENAME)
-    champion_to_count = process_records(data)
-    countries = process_data(data)
+    champion_to_count, countries = process_records(data)
     print_data()
 
 
@@ -24,7 +23,7 @@ def get_sorted_data(filename):
     return data
 
 
-def process_data(data):
+def process_records(data):
     """Create dictionary of champions and set of countries from records (list of lists)."""
     champion_to_count = {}
     countries = set()
@@ -34,8 +33,7 @@ def process_data(data):
             champion_to_count[datum[2]] += 1  # Index of champion
         except KeyError:
             champion_to_count[datum[2]] = 1  # Index of champion
-    return champion_to_count
-    return countries
+    return champion_to_count, countries
 
 
 
