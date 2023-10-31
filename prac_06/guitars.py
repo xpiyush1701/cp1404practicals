@@ -1,6 +1,6 @@
 """
-Estimated Time: 35 Minutes
-Actual Time: 21 Minutes
+Estimated Time: 15 Minutes
+Actual Time:
 """
 
 from prac_06.guitar import Guitar
@@ -14,6 +14,9 @@ def main():
     name = input("Name: ")
     year = int(input("Year: "))
     cost = float(input("Cost: "))
+
+    guitar = Guitar(name, year, cost)
+    guitars.append(guitar)
 
 
 main()
