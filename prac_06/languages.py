@@ -1,6 +1,6 @@
 """
 Estimated Time: 15 Minutes
-Actual Time:
+Actual Time: 26 Minutes
 """
 
 from prac_06.programming_language import ProgrammingLanguage
