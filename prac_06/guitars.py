@@ -20,6 +20,10 @@ def main():
     print(f"{name} ({year}) : ${cost:.2f} added.")
     guitar_number += 1
 
+    print("These are my guitars:")
+    for i, guitar in enumerate(guitars):
+        vintage_status = " (vintage)" if guitar.is_vintage(2022) else ""
+        print(vintage_status)
 
 
 main()
