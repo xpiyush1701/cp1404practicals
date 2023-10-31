@@ -17,6 +17,9 @@ def main():
 
     guitar = Guitar(name, year, cost)
     guitars.append(guitar)
+    print(f"{name} ({year}) : ${cost:.2f} added.")
+    guitar_number += 1
+
 
 
 main()
