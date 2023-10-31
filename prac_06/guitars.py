@@ -1,6 +1,6 @@
 """
 Estimated Time: 15 Minutes
-Actual Time:
+Actual Time: 38 Minutes
 """
 
 from prac_06.guitar import Guitar
@@ -22,8 +22,8 @@ def main():
 
     print("These are my guitars:")
     for i, guitar in enumerate(guitars):
-        vintage_status = " (vintage)" if guitar.is_vintage(2022) else ""
-        print(vintage_status)
+        vintage_status = " (vintage)" if guitar.is_vintage(2023) else ""
+        print(f"Guitar {i}: {guitar.name} ({guitar.year}), worth $ {guitar.cost:.2f}{vintage_status}")
 
 
 main()
