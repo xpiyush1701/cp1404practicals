@@ -1,6 +1,6 @@
 """
 Expected Time: 40 Minutes
-Actual Time:
+Actual Time: 60 Minutes
 """
 
 import csv

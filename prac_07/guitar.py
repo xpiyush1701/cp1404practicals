@@ -1,6 +1,6 @@
 """
 Estimated Time: 15 Minutes
-Actual Time:  Minutes
+Actual Time: 25 Minutes
 """
 import csv
 from prac_06.guitar_test import present_year
