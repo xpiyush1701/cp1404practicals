@@ -7,6 +7,11 @@ import csv
 from datetime import datetime
 
 
+def main():
+    filename = "projects.txt"
+    projects = load_projects(filename)
+
+
 class Project:
     def __init__(self, name, start_date, priority, cost_estimate, completion_percentage):
         self.name = name
@@ -20,7 +25,7 @@ class Project:
                f"Cost Estimate: {self.cost_estimate}, Completion Percentage: {self.completion_percentage}%)"
 
 
-def load_projects(filename, projects):
+def load_projects(filename):
     projects = []
     with open(filename, "r") as in_file:
         reader = csv.DictReader(in_file)
@@ -40,3 +45,6 @@ def save_projects(filename, projects):
             writer.writerow({'Name': project.name, 'Start Date': project.start_date.strftime('%d/%m/%Y'),
                              'Priority': project.priority, 'Cost Estimate': project.cost_estimate,
                              'Completion Percentage': project.completion_percentage})
+
+
+main()
