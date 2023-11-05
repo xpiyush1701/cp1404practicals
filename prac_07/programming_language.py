@@ -1,6 +1,8 @@
 """
 CP1404/CP5632 Practical - Suggested Solution
 Programming Language class with tests.
+Estimated Time:
+Actual Time:
 """
 
 
