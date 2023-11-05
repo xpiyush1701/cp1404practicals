@@ -6,10 +6,34 @@ Actual Time:
 import csv
 from datetime import datetime
 
+MENU = "(L)oad projects\n(S)ave projects\n(D)isplay projects\n(F)ilter projects by date\n(A)dd new project\n" \
+       "U)pdate project\n(Q)uit"
+
 
 def main():
     filename = "projects.txt"
     projects = load_projects(filename)
+
+    print(MENU)
+    choice = input(">>> ").upper()
+    while choice != "Q":
+        if choice == "L":
+            projects = load_projects(filename)
+            pass
+        elif choice == "S":
+            save_projects(projects, filename)
+        elif choice == "D":
+            pass
+        elif choice == "F":
+            pass
+        elif choice == "A":
+            pass
+        elif choice == "U":
+            pass
+        else:
+            print("Invalid menu choice")
+        print(MENU)
+        choice = input(">>> ").upper()
 
 
 class Project:
