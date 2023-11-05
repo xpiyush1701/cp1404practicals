@@ -1,9 +1,8 @@
 """
-Estimated Time: 35 Minutes
-Actual Time: 22 Minutes
+Estimated Time: 15 Minutes
+Actual Time:  Minutes
 """
 import csv
-
 from prac_06.guitar_test import present_year
 
 
@@ -27,6 +26,10 @@ class Guitar:
     def is_vintage(self, present_year):
         """Check to see if Guitar is vintage."""
         return self.get_age(present_year) >= 50
+
+    def __lt__(self, other):
+        """Sort by year."""
+        return self.year < other.year
 
 
 # Create a list to store Guitar objects
